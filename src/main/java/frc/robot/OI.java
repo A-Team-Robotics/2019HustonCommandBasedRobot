@@ -12,6 +12,7 @@ package frc.robot;
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
+  //TODO create create variables to map whichj button will control which robot function for the turret
   //// CREATING BUTTONS
   // One type of button is a joystick button which is any button on a
   //// joystick.

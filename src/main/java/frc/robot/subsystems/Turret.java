@@ -16,7 +16,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  * Add your docs here.
  */
 public class Turret extends Subsystem {
-  private static final WPI_TalonSRX turretMotorOne = new WPI_TalonSRX();
+  private WPI_TalonSRX turretMotorOne = new WPI_TalonSRX();
 
   @Override
   public void initDefaultCommand() {
