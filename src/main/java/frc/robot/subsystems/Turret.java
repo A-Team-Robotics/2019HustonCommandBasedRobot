@@ -9,19 +9,20 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
-import edu.wpi.first.wpilibj.SendableBase;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.RobotMap;
+import frc.robot.commands.limitSwitch;
 
 /**
  * Add your docs here.
  */
 public class Turret extends Subsystem {
-  private WPI_TalonSRX turretMotorOne = new WPI_TalonSRX();
+  private WPI_TalonSRX turretMotorOne = new WPI_TalonSRX(RobotMap.turretMotorOne);
 
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
-    // setDefaultCommand(new MySpecialCommand());
+    //setDefaultCommand(new limitSwitch());
   }
 }
 
