@@ -15,4 +15,6 @@ package frc.robot;
  */
 public class RobotMap {
   public static int turretMotorOne = 6;
+  public static int turretEncoder = 1;
+  public static int limitSwitch = 2;
 }

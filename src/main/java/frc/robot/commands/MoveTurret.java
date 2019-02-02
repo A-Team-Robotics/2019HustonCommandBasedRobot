@@ -11,12 +11,18 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.SampleRobot;
 import edu.wpi.first.wpilibj.Timer;
+import frc.robot.Robot;
 
 
-public class limitSwitch extends Command {
-  public limitSwitch() {
+
+public class MoveTurret extends Command {
+  public MoveTurret() {
     // Use requires() here to declare subsystem dependencies
-    // eg. requires(chassis);
+    requires(Robot.turret);
+  }
+  public static int limitswitch1(int N1, int N2) {
+    return 0;
+
   }
 
   // Called just before this Command runs the first time
@@ -27,11 +33,13 @@ public class limitSwitch extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
+    Robot.turret.setTurretSpeed(1.0);
   }
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
+    if turretEncoder = 0000;
     return false;
   }
 
