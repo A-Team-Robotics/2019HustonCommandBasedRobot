@@ -8,6 +8,7 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import frc.robot.commands.MoveTurret;
 import edu.wpi.first.wpilibj.Joystick;
 
 
@@ -19,7 +20,11 @@ public class OI {
   public Joystick xboxController = new Joystick(1);
   private JoystickButton moveTurretRight = new JoystickButton(xboxController, 0);
   private JoystickButton moveTurretLeft = new JoystickButton(xboxController, 1);
-  
+  public OI() {
+    moveTurretLeft.whenPressed(new MoveTurret());
+    moveTurretRight.whenPressed(new MoveTurret());
+
+  }
 
   // There are a few additional built in buttons you can use. Additionally,
   // by subclassing Button you can create custom triggers and bind those to
