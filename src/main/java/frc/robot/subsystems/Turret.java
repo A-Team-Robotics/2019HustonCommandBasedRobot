@@ -23,7 +23,11 @@ import edu.wpi.first.wpilibj.DigitalInput;
 public class Turret extends Subsystem {
   private WPI_TalonSRX turretMotorOne = new WPI_TalonSRX(RobotMap.turretMotorOne);
   private Encoder turretEncoder = new Encoder(RobotMap.turretEncoder, RobotMap.turretEncoder);
-  private DigitalInput limitSwitch = new DigitalInput(0);
+  private Encoder slideEncoder = new Encoder(RobotMap.slideEncoder, RobotMap.slideEncoder);
+  private DigitalInput limitSwitch1 = new DigitalInput(0);
+  private DigitalInput limitSwitch2 = new DigitalInput(1);
+  private DigitalInput limitSwitch3 = new DigitalInput(2);
+  private DigitalInput limitSwitch4 = new DigitalInput(4);
 
   @Override
   public void initDefaultCommand() {
@@ -34,8 +38,8 @@ public class Turret extends Subsystem {
   public void setTurretSpeed(double speed) {
     turretMotorOne.set(speed);
   }
-  public void getEncoder() {
-    turretEncoder.getRaw();
+  public int getEncoder() {
+    return turretEncoder.getRaw();
   }
 
 }

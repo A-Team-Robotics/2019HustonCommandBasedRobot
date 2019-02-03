@@ -8,9 +8,6 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.DigitalInput;
-import edu.wpi.first.wpilibj.SampleRobot;
-import edu.wpi.first.wpilibj.Timer;
 import frc.robot.Robot;
 
 
@@ -34,12 +31,15 @@ public class MoveTurret extends Command {
   @Override
   protected void execute() {
     Robot.turret.setTurretSpeed(1.0);
+    Robot.turret.setTurretSpeed(0.5);
   }
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
-    if turretEncoder = 0000;
+    if(Robot.turret.getEncoder() == 5000){
+      return true;
+    }
     return false;
   }
 

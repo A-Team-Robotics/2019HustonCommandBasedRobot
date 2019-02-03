@@ -14,7 +14,11 @@ package frc.robot;
  * floating around.
  */
 public class RobotMap {
-  public static int turretMotorOne = 6;
   public static int turretEncoder = 1;
-  public static int limitSwitch = 2;
+  public static int turretMotorOne = 6;
+  public static int limitSwitch1 = 2;
+  public static int limitSwitch2 = 3;
+  public static int slideEncoder = 4;
+  public static int limitSwitch3 = 5;
+  public static int limitSwitch4 = 7;
 }
