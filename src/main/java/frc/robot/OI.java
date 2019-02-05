@@ -7,12 +7,10 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import frc.robot.commands.MoveTurret;
 import frc.robot.commands.moveTurretLeft;
 import frc.robot.commands.moveTurretRight;
-import edu.wpi.first.wpilibj.Joystick;
-
 
 /**
  * This class is the glue that binds the controls on the physical operator
