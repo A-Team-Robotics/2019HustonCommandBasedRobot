@@ -9,6 +9,8 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.robot.commands.MoveTurret;
+import frc.robot.commands.moveTurretLeft;
+import frc.robot.commands.moveTurretRight;
 import edu.wpi.first.wpilibj.Joystick;
 
 
@@ -21,8 +23,8 @@ public class OI {
   private JoystickButton moveTurretRight = new JoystickButton(xboxController, 0);
   private JoystickButton moveTurretLeft = new JoystickButton(xboxController, 1);
   public OI() {
-    moveTurretLeft.whenPressed(new MoveTurret());
-    moveTurretRight.whenPressed(new MoveTurret());
+    moveTurretLeft.whenPressed(new moveTurretLeft());
+    moveTurretRight.whenPressed(new moveTurretRight());
 
   }
 

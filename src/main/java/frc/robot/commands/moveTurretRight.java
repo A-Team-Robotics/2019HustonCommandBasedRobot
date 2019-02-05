@@ -14,7 +14,9 @@ public class moveTurretRight extends Command {
   public moveTurretRight() {
     requires(Robot.turret);
   }
-
+  public static int limitswitch1(int N1, int N2) {
+return 0;
+  }
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {

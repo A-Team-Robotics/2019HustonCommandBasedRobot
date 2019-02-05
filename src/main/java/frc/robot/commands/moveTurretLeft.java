@@ -7,12 +7,17 @@
 
 package frc.robot.commands;
 
+import com.ctre.phoenix.motorcontrol.LimitSwitchNormal;
+
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
 public class moveTurretLeft extends Command {
   public moveTurretLeft() {
   requires(Robot.turret);
+  }
+  public static int limitswitch1(int N1, int N2) {
+    return 0;
   }
 
   // Called just before this Command runs the first time
@@ -30,6 +35,9 @@ public class moveTurretLeft extends Command {
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
+    if(Robot.turret.getEncoder() == 0000){
+      
+    }
     return false;
   }
 

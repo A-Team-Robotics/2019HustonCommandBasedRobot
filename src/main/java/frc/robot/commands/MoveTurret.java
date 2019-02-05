@@ -10,12 +10,9 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
-
-
 public class MoveTurret extends Command {
   public MoveTurret() {
-    // Use requires() here to declare subsystem dependencies
-    requires(Robot.turret);
+  requires(Robot.turret);
   }
   public static int limitswitch1(int N1, int N2) {
     return 0;
