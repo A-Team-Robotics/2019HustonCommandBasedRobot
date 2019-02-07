@@ -33,7 +33,7 @@ public class stopTurret extends Command {
   @Override
   protected boolean isFinished() {
     if(Robot.turret.getEncoder() == 0000) {
-      
+      return true;
     }
     return false;
   }
