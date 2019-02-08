@@ -9,8 +9,11 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import frc.robot.commands.MoveTurret;
 import frc.robot.commands.moveTurretLeft;
 import frc.robot.commands.moveTurretRight;
+import frc.robot.commands.stopMotor;
+import frc.robot.commands.stopTurret;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -18,11 +21,18 @@ import frc.robot.commands.moveTurretRight;
  */
 public class OI {
   public Joystick xboxController = new Joystick(1);
-  private JoystickButton moveTurretRight = new JoystickButton(xboxController, 0);
-  private JoystickButton moveTurretLeft = new JoystickButton(xboxController, 1);
+  private JoystickButton MoveTurret = new JoystickButton(xboxController, 0);
+  private JoystickButton moveTurretRight = new JoystickButton(xboxController, 1);
+  private JoystickButton moveTurretLeft = new JoystickButton(xboxController, 2);
+  private JoystickButton stopMotor = new JoystickButton(xboxController, 3);
+  private JoystickButton stopTurret = new JoystickButton(xboxController, 4);
+
   public OI() {
+    MoveTurret.whenPressed(new MoveTurret());
     moveTurretLeft.whenPressed(new moveTurretLeft());
     moveTurretRight.whenPressed(new moveTurretRight());
+    stopTurret.whenPressed(new stopTurret());
+    stopMotor.whenPressed(new stopMotor());
 
   }
 
