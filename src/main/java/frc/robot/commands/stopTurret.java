@@ -8,15 +8,14 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
-import edu.wpi.first.wpilibj.DigitalInput;
-import edu.wpi.first.wpilibj.SampleRobot;
-import edu.wpi.first.wpilibj.Timer;
+import frc.robot.Robot;
 
 
-public class limitSwitch extends Command {
-  public limitSwitch() {
+
+public class stopTurret extends Command {
+  public stopTurret() {
     // Use requires() here to declare subsystem dependencies
-    // eg. requires(chassis);
+    requires(Robot.turret);
   }
 
   // Called just before this Command runs the first time
@@ -27,11 +26,15 @@ public class limitSwitch extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
+    Robot.turret.setTurretSpeed(0.0);
   }
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
+    if(Robot.turret.getEncoder() == 0000) {
+      return true;
+    }
     return false;
   }
 
