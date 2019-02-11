@@ -38,7 +38,6 @@ public class OI {
     moveTurretRight.whenPressed(new moveTurretRight());
     stopTurret.whenPressed(new stopTurret());
     stopMotor.whenPressed(new stopMotor());
-
   }
 
   // There are a few additional built in buttons you can use. Additionally,
