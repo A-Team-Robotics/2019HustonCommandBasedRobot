@@ -21,16 +21,17 @@ import frc.robot.commands.stopTurret;
  */
 public class OI {
   public Joystick xboxController = new Joystick(1);
-  private JoystickButton MoveTurret = new JoystickButton(xboxController, 9);
-  private JoystickButton moveTurretRight = new JoystickButton(xboxController, 5);
-  private JoystickButton moveTurretLeft = new JoystickButton(xboxController, 6);
-  private JoystickButton stopMotor = new JoystickButton(xboxController, 7);
-  private JoystickButton stopTurret = new JoystickButton(xboxController, 8);
+  public Joystick joyStick = new Joystick(2);
+  private JoystickButton MoveTurret = new JoystickButton(xboxController, 1);
+  private JoystickButton moveTurretRight = new JoystickButton(joyStick, 6);
+  private JoystickButton moveTurretLeft = new JoystickButton(joyStick, 5);
+  private JoystickButton stopMotor = new JoystickButton(xboxController, 2);
+  private JoystickButton stopTurret = new JoystickButton(joyStick, 11);
   private JoystickButton openGripper = new JoystickButton(xboxController, 3);
   private JoystickButton closeGripper = new JoystickButton(xboxController,4 );
-  private JoystickButton Intake = new JoystickButton(xboxController, 1);
-  private JoystickButton OutTake = new JoystickButton(xboxController, 2);
-  private JoystickButton LiftSystem = new JoystickButton(xboxController, 10);
+  private JoystickButton Intake = new JoystickButton(joyStick, 4);
+  private JoystickButton OutTake = new JoystickButton(joyStick, 3);
+  private JoystickButton LiftSystem = new JoystickButton(joyStick, 1);
 
   public OI() {
     MoveTurret.whenPressed(new MoveTurret());
