@@ -8,6 +8,7 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import frc.robot.commands.MoveTurret;
 import frc.robot.commands.moveTurretLeft;
@@ -21,11 +22,11 @@ import frc.robot.commands.stopTurret;
  */
 public class OI {
   public Joystick xboxController = new Joystick(1);
-  private JoystickButton MoveTurret = new JoystickButton(xboxController, 9);
-  private JoystickButton moveTurretRight = new JoystickButton(xboxController, 5);
-  private JoystickButton moveTurretLeft = new JoystickButton(xboxController, 6);
-  private JoystickButton stopMotor = new JoystickButton(xboxController, 7);
-  private JoystickButton stopTurret = new JoystickButton(xboxController, 8);
+  private Button MoveTurret = new JoystickButton(xboxController, 9);
+  private Button moveTurretRight = new JoystickButton(xboxController, 5);
+  private Button moveTurretLeft = new JoystickButton(xboxController, 6);
+  private Button stopMotor = new JoystickButton(xboxController, 7);
+  private Button stopTurret = new JoystickButton(xboxController, 8);
   private JoystickButton openGripper = new JoystickButton(xboxController, 3);
   private JoystickButton closeGripper = new JoystickButton(xboxController,4 );
   private JoystickButton Intake = new JoystickButton(xboxController, 1);
@@ -37,7 +38,7 @@ public class OI {
     moveTurretLeft.whenPressed(new moveTurretLeft());
     moveTurretRight.whenPressed(new moveTurretRight());
     stopTurret.whenPressed(new stopTurret());
-    stopMotor.whenPressed(new stopMotor());
+    stopMotor.whileHeld(new stopMotor());
   }
 
   // There are a few additional built in buttons you can use. Additionally,
