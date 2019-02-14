@@ -8,19 +8,34 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
-import frc.robot.RobotMap;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
+import edu.wpi.first.wpilibj.DigitalInput;
+import edu.wpi.first.wpilibj.Encoder;
+import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.RobotMap;
+import frc.robot.commands.stopTurret;
 
 /**
  * Add your docs here.
  */
-public class Gripper extends Subsystem {
+public class Elavator extends Subsystem {
+  // Put methods for controlling this subsystem
+  private WPI_TalonSRX elavatorMotor = new WPI_TalonSRX(RobotMap.elevatorMotor);
+  private Encoder elavatorEncoder = new Encoder(RobotMap.elavatorEncoder, RobotMap.elavatorEncoder);
+  private DigitalInput elavatorSwitch = new DigitalInput(4);
+  private DigitalInput elavatorSwitch2 = new DigitalInput(5);
 
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
+  }
+  public void setIntakeSpeed(double speed) {
+    elavatorMotor.set(speed);
+  }
+  public int getEncoder() {
+    return elavatorEncoder.getRaw();
   }
 }
