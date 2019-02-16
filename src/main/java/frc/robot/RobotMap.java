@@ -22,9 +22,12 @@ public class RobotMap {
   public static int limitSwitch3 = 6;
   public static int limitSwitch4 = 7;
   public static int intakeMotor = 8;
-  public static int intakeEncoder = 9;
+  public static int intakeEncoder1 = 9;
   public static int elevatorMotor = 10;
   public static int elavatorEncoder = 11;
   public static int intakemotor2 = 12;
-  public static int intakeEncoder = 13;
+  public static int intakeEncoder2 = 13;
+  public static final int SolenoidOne[] = {0, 1};
+  public static final int SolenoidTwo[] = {2, 3};
+  public static final int frontLeftCIM = 14;
 }

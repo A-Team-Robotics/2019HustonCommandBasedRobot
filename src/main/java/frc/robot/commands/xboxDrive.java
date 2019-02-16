@@ -9,8 +9,8 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class intake extends Command {
-  public intake() {
+public class xboxDrive extends Command {
+  public xboxDrive() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
   }

@@ -12,6 +12,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import frc.robot.subsystems.DriveSubsystem;
 import frc.robot.subsystems.Turret;
 
 /**
@@ -24,6 +25,7 @@ import frc.robot.subsystems.Turret;
 public class Robot extends TimedRobot {
   public static OI m_oi;
   public static Turret turret = new Turret();
+  public static DriveSubsystem drive = new DriveSubsystem();
 
   Command m_autonomousCommand;
   SendableChooser<Command> m_chooser = new SendableChooser<>();
