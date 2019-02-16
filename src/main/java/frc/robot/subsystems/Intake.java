@@ -18,7 +18,8 @@ import frc.robot.commands.intake;
  * Add your docs here.
  */
 public class Intake extends Subsystem {
-  private WPI_TalonSRX intakeMotor = new WPI_TalonSRX(RobotMap.intakeMotor);
+  private WPI_TalonSRX intakeMotor1 = new WPI_TalonSRX(RobotMap.intakeMotor);
+  private WPI_TalonSRX intakemotor2 = new WPI_TalonSRX(RobotMap.intakemotor2);
   private Encoder intakeEncoder = new Encoder(RobotMap.intakeEncoder, RobotMap.intakeEncoder);
 
   @Override
@@ -27,7 +28,10 @@ public class Intake extends Subsystem {
     setDefaultCommand(new intake());
   }
   public void setIntakeSpeed(double speed) {
-    intakeMotor.set(speed);
+    intakeMotor1.set(speed);
+  }
+  public void setIntakeSpeed(double speed) {
+    intakemotor2.set(speed);
   }
   public int getEncoder() {
     return intakeEncoder.getRaw();
