@@ -30,4 +30,7 @@ public class RobotMap {
   public static final int SolenoidOne[] = {0, 1};
   public static final int SolenoidTwo[] = {2, 3};
   public static final int frontLeftCIM = 14;
+  public static final int frontRightCIM = 15;
+  public static final int backLeftCIM = 16;
+  public static final int backRightCIM = 17;
 }

@@ -7,14 +7,12 @@
 
 package frc.robot.commands;
 
-import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.command.Command;
-import frc.robot.Robot;
+import edu.wpi.first.wpilibj.command.CommandGroup;
 
-public class xboxDrive extends Command {
-  public xboxDrive() {
+public class DeployIntake extends CommandGroup {
+  public DeployIntake() {
     // Use requires() here to declare subsystem dependencies
-    requires(Robot.drive);
+    // eg. requires(chassis);
   }
 
   // Called just before this Command runs the first time
@@ -25,7 +23,6 @@ public class xboxDrive extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    Robot.drive.xboxDrive(Robot.m_oi.xboxController);
   }
 
   // Make this return true when this Command no longer needs to run execute()

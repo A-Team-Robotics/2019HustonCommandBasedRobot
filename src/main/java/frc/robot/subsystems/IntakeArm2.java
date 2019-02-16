@@ -9,31 +9,19 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
-import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
-import frc.robot.commands.intake;
 
 /**
  * Add your docs here.
  */
-public class Intake extends Subsystem {
-  private WPI_TalonSRX intakeMotor1 = new WPI_TalonSRX(RobotMap.intakeMotor);
+public class IntakeArm2 extends Subsystem {
+  // Put methods for controlling this subsystem
   private WPI_TalonSRX intakemotor2 = new WPI_TalonSRX(RobotMap.intakemotor2);
-  private Encoder intakeEncoder1 = new Encoder(RobotMap.intakeEncoder1, RobotMap.intakeEncoder1);
-  private Encoder intakeEncoder2 = new Encoder(RobotMap.intakeEncoder2, RobotMap.intakeEncoder2);
 
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
-    setDefaultCommand(new intake());
-  }
-  public void setIntakeSpeed(double speed) {
-    intakeMotor1.set(speed);
-  }
-  public int getEncoder() {
-    return intakeEncoder1.getRaw();
-
+    // setDefaultCommand(new MySpecialCommand());
   }
 }
-

@@ -9,29 +9,30 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
-import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
+import frc.robot.commands.intake;
 
 /**
  * Add your docs here.
  */
-public class Elavator extends Subsystem {
-  // Put methods for controlling this subsystem
-  private WPI_TalonSRX elavatorMotor = new WPI_TalonSRX(RobotMap.elevatorMotor);
-  private DigitalInput elavatorSwitch = new DigitalInput(4);
-  private DigitalInput elavatorSwitch2 = new DigitalInput(5);
+public class IntakeSystem extends Subsystem {
+  private WPI_TalonSRX intakeMotor1 = new WPI_TalonSRX(RobotMap.intakeMotor);
+  private Encoder intakeEncoder1 = new Encoder(RobotMap.intakeEncoder1, RobotMap.intakeEncoder1);
+  private Encoder intakeEncoder2 = new Encoder(RobotMap.intakeEncoder2, RobotMap.intakeEncoder2);
 
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
-    // setDefaultCommand(new MySpecialCommand());
+    setDefaultCommand(new intake());
   }
   public void setIntakeSpeed(double speed) {
-    elavatorMotor.set(speed);
+    intakeMotor1.set(speed);
   }
   public int getEncoder() {
-    return elavatorMotor.getSelectedSensorPosition();
+    return intakeMotor1.getSelectedSensorPosition();
+
   }
 }
+
