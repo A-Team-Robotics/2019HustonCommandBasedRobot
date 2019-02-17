@@ -20,8 +20,8 @@ import frc.robot.RobotMap;
 public class Elavator extends Subsystem {
   // Put methods for controlling this subsystem
   private WPI_TalonSRX elavatorMotor = new WPI_TalonSRX(RobotMap.elevatorMotor);
-  private DigitalInput elavatorSwitch = new DigitalInput(4);
-  private DigitalInput elavatorSwitch2 = new DigitalInput(5);
+  private DigitalInput elavatorSwitch = new DigitalInput(5);
+  private DigitalInput elavatorSwitch2 = new DigitalInput(6);
 
   @Override
   public void initDefaultCommand() {
