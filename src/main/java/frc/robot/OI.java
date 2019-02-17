@@ -20,7 +20,7 @@ import frc.robot.commands.RaiseElavator;
 import frc.robot.commands.StopMotor;
 import frc.robot.commands.StopTurret;
 import frc.robot.commands.lowerElavator;
-import frc.robot.commands.openGripper;
+import frc.robot.commands.OpenGripper;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -49,7 +49,7 @@ public class OI {
     stopTurret.whenPressed(new StopTurret());
     stopMotor.whenPressed(new StopMotor());
     closeGripper.whenPressed(new CloseGripper());
-    openGripper.whenPressed(new openGripper());
+    openGripper.whenPressed(new OpenGripper());
     Intake.whenPressed(new Intake());
     OutTake.whenPressed(new OutTake());
     lowerElavator.whenPressed(new lowerElavator());
