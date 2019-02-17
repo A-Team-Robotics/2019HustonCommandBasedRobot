@@ -7,6 +7,7 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.wpilibj.DigitalInput;
@@ -27,8 +28,8 @@ public class Elavator extends Subsystem {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
   }
-  public void setElavatorspeed(double speed) {
-    elavatorMotor.set(speed);
+  public void setposition(int pos) {
+    elavatorMotor.set(ControlMode.Position,pos);
   }
   public int getEncoder() {
     return elavatorMotor.getSelectedSensorPosition();

@@ -12,11 +12,11 @@ import edu.wpi.first.wpilibj.command.InstantCommand;
 /**
  * Add your docs here.
  */
-public class ElavatorUp extends InstantCommand {
+public class ElavatorMid extends InstantCommand {
   /**
    * Add your docs here.
    */
-  public ElavatorUp() {
+  public ElavatorMid() {
     super();
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
