@@ -9,6 +9,7 @@ package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
@@ -21,6 +22,7 @@ public class IntakeSystem extends Subsystem {
   private WPI_TalonSRX intakeMotor1 = new WPI_TalonSRX(RobotMap.intakeMotor);
   private Encoder intakeEncoder1 = new Encoder(RobotMap.intakeEncoder1, RobotMap.intakeEncoder1);
   private Encoder intakeEncoder2 = new Encoder(RobotMap.intakeEncoder2, RobotMap.intakeEncoder2);
+  private DoubleSolenoid SolenoidThree = new DoubleSolenoid(RobotMap.SolenoidThree[4], RobotMap.SolenoidThree[5]);
 
   @Override
   public void initDefaultCommand() {

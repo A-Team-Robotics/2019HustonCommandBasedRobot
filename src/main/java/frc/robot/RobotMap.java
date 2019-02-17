@@ -29,6 +29,7 @@ public class RobotMap {
   public static int intakeEncoder2 = 13;
   public static final int SolenoidOne[] = {0, 1};
   public static final int SolenoidTwo[] = {2, 3};
+  public static final int SolenoidThree[] = {4, 5};
   public static final int frontLeftCIM = 4;
   public static final int frontRightCIM = 5;
   public static final int backLeftCIM = 2;
