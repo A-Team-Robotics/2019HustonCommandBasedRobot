@@ -20,9 +20,7 @@ import frc.robot.commands.Intake;
  */
 public class IntakeSystem extends Subsystem {
   private WPI_TalonSRX intakeMotor1 = new WPI_TalonSRX(RobotMap.intakeMotor);
-  private Encoder intakeEncoder1 = new Encoder(RobotMap.intakeEncoder1, RobotMap.intakeEncoder1);
-  private Encoder intakeEncoder2 = new Encoder(RobotMap.intakeEncoder2, RobotMap.intakeEncoder2);
-  private DoubleSolenoid SolenoidThree = new DoubleSolenoid(RobotMap.SolenoidThree[4], RobotMap.SolenoidThree[5]);
+  private DoubleSolenoid SolenoidThree = new DoubleSolenoid(RobotMap.SolenoidThree[0], RobotMap.SolenoidThree[1]);
 
   @Override
   public void initDefaultCommand() {
