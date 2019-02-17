@@ -8,11 +8,12 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.CommandGroup;
+import frc.robot.Robot;
 
 public class DeployIntake extends CommandGroup {
   public DeployIntake() {
     // Use requires() here to declare subsystem dependencies
-    // eg. requires(chassis);
+    requires(Robot.gripper);
   }
 
   // Called just before this Command runs the first time

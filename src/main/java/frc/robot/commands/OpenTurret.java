@@ -9,11 +9,12 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
+import frc.robot.subsystems.Turret;
 
-public class lowerElavator extends Command {
-  public lowerElavator() {
+public class OpenTurret extends Command {
+  public OpenTurret() {
     // Use requires() here to declare subsystem dependencies
-    requires(Robot.elevator);
+    requires(Robot.turret);
   }
 
   // Called just before this Command runs the first time

@@ -18,14 +18,14 @@ public class SolenoidOneControl extends InstantCommand {
   public SolenoidOneControl(boolean sol) {
     super();
     // Use requires() here to declare subsystem dependencies
-    requires(Robot.Gripper);
+    requires(Robot.cylinderOne);
     this.sol = sol;
   }
 
   // Called once when the command executes
   @Override
   protected void initialize() {
-    Robot.solenoidOne.setposition(sol);
+    Robot.cylinderOne.setposition(sol);
   }
 
 }

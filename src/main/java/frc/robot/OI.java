@@ -9,18 +9,16 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
-import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.commands.MoveTurret;
 import frc.robot.commands.OutTake;
-import frc.robot.commands.moveTurretLeft;
-import frc.robot.commands.moveTurretRight;
-import frc.robot.commands.stopMotor;
-import frc.robot.commands.stopTurret;
-import frc.robot.commands.openGripper;
 import frc.robot.commands.closeGripper;
 import frc.robot.commands.intake;
 import frc.robot.commands.lowerElavator;
+import frc.robot.commands.moveTurretLeft;
+import frc.robot.commands.moveTurretRight;
 import frc.robot.commands.raiseElavator;
+import frc.robot.commands.stopMotor;
+import frc.robot.commands.stopTurret;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -35,10 +33,12 @@ public class OI {
   private JoystickButton stopMotor = new JoystickButton(xboxController, 2);
   private JoystickButton stopTurret = new JoystickButton(joyStick, 11);
   private JoystickButton closeGripper = new JoystickButton(xboxController,4 );
+  private JoystickButton openGripper = new JoystickButton(joyStick, 5);
   private JoystickButton Intake = new JoystickButton(joyStick, 4);
   private JoystickButton OutTake = new JoystickButton(joyStick, 3);
   private JoystickButton lowerElavator = new JoystickButton(joyStick, 1);
   private JoystickButton raiseElevator = new JoystickButton(joyStick, 2);
+  private JoystickButton placeHatch = new JoystickButton(joyStick, 7);
 
   public OI() {
     MoveTurret.whenPressed(new MoveTurret());
@@ -51,6 +51,7 @@ public class OI {
     OutTake.whenPressed(new OutTake());
     lowerElavator.whenPressed(new lowerElavator());
     raiseElevator.whenPressed(new raiseElavator());
+
   }
 
   // There are a few additional built in buttons you can use. Additionally,

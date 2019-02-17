@@ -11,8 +11,8 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
-public class xboxDrive extends Command {
-  public xboxDrive() {
+public class XboxDrive extends Command {
+  public XboxDrive() {
     // Use requires() here to declare subsystem dependencies
     requires(Robot.drive);
   }

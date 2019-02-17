@@ -13,11 +13,11 @@ import frc.robot.Robot;
 /**
  * Add your docs here.
  */
-public class stopMotor extends InstantCommand {
+public class StopMotor extends InstantCommand {
   /**
    * Add your docs here.
    */
-  public stopMotor() {
+  public StopMotor() {
     super();
     // Use requires() here to declare subsystem dependencies
   requires(Robot.turret);

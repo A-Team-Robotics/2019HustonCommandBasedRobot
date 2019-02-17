@@ -12,8 +12,8 @@ import frc.robot.Robot;
 
 
 
-public class stopTurret extends Command {
-  public stopTurret() {
+public class StopTurret extends Command {
+  public StopTurret() {
     // Use requires() here to declare subsystem dependencies
     requires(Robot.turret);
   }
