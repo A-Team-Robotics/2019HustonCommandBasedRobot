@@ -27,7 +27,7 @@ public class Elavator extends Subsystem {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
   }
-  public void setIntakeSpeed(double speed) {
+  public void setElavatorspeed(double speed) {
     elavatorMotor.set(speed);
   }
   public int getEncoder() {
