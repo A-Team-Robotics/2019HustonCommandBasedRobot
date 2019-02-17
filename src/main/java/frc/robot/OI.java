@@ -9,16 +9,18 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import frc.robot.commands.CloseGripper;
+import frc.robot.commands.Intake;
 import frc.robot.commands.MoveTurret;
+import frc.robot.commands.MoveTurretLeft;
+import frc.robot.commands.MoveTurretRight;
 import frc.robot.commands.OutTake;
-import frc.robot.commands.closeGripper;
-import frc.robot.commands.intake;
+import frc.robot.commands.PlaceHatch;
+import frc.robot.commands.RaiseElavator;
+import frc.robot.commands.StopMotor;
+import frc.robot.commands.StopTurret;
 import frc.robot.commands.lowerElavator;
-import frc.robot.commands.moveTurretLeft;
-import frc.robot.commands.moveTurretRight;
-import frc.robot.commands.raiseElavator;
-import frc.robot.commands.stopMotor;
-import frc.robot.commands.stopTurret;
+import frc.robot.commands.openGripper;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -32,7 +34,7 @@ public class OI {
   private JoystickButton moveTurretLeft = new JoystickButton(joyStick, 5);
   private JoystickButton stopMotor = new JoystickButton(xboxController, 2);
   private JoystickButton stopTurret = new JoystickButton(joyStick, 11);
-  private JoystickButton closeGripper = new JoystickButton(xboxController,4 );
+  private JoystickButton closeGripper = new JoystickButton(xboxController, 4);
   private JoystickButton openGripper = new JoystickButton(joyStick, 5);
   private JoystickButton Intake = new JoystickButton(joyStick, 4);
   private JoystickButton OutTake = new JoystickButton(joyStick, 3);
@@ -42,15 +44,17 @@ public class OI {
 
   public OI() {
     MoveTurret.whenPressed(new MoveTurret());
-    moveTurretLeft.whenPressed(new moveTurretLeft());
-    moveTurretRight.whenPressed(new moveTurretRight());
-    stopTurret.whenPressed(new stopTurret());
-    stopMotor.whenPressed(new stopMotor());
-    closeGripper.whenPressed(new closeGripper());
-    Intake.whenPressed(new intake());
+    moveTurretLeft.whenPressed(new MoveTurretLeft());
+    moveTurretRight.whenPressed(new MoveTurretRight());
+    stopTurret.whenPressed(new StopTurret());
+    stopMotor.whenPressed(new StopMotor());
+    closeGripper.whenPressed(new CloseGripper());
+    openGripper.whenPressed(new openGripper());
+    Intake.whenPressed(new Intake());
     OutTake.whenPressed(new OutTake());
     lowerElavator.whenPressed(new lowerElavator());
-    raiseElevator.whenPressed(new raiseElavator());
+    raiseElevator.whenPressed(new RaiseElavator());
+    placeHatch.whenPressed(new PlaceHatch());
 
   }
 

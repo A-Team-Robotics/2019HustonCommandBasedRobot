@@ -12,7 +12,7 @@ import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
-import frc.robot.commands.intake;
+import frc.robot.commands.Intake;
 
 /**
  * Add your docs here.
@@ -25,7 +25,7 @@ public class IntakeSystem extends Subsystem {
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
-    setDefaultCommand(new intake());
+    setDefaultCommand(new Intake());
   }
   public void setIntakeSpeed(double speed) {
     intakeMotor1.set(speed);

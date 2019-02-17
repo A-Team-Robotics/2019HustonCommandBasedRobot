@@ -13,7 +13,7 @@ import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
-import frc.robot.commands.stopTurret;
+import frc.robot.commands.StopTurret;
 
 /**
  * Add your docs here.
@@ -30,7 +30,7 @@ public class Turret extends Subsystem {
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
-    setDefaultCommand(new stopTurret());
+    setDefaultCommand(new StopTurret());
   }
 
   public void setTurretSpeed(double speed) {
