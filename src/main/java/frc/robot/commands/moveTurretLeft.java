@@ -10,8 +10,8 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
 
-public class moveTurretLeft extends Command {
-  public moveTurretLeft() {
+public class MoveTurretLeft extends Command {
+  public MoveTurretLeft() {
   requires(Robot.turret);
   }
   public static int limitswitch1(int N1, int N2) {
